@@ -1,0 +1,46 @@
+#API call for listing heros
+###
+GET http://127.0.0.1:8000/heros/
+Accept:application/json
+
+#API call for adding heros
+###
+POST  http://127.0.0.1:8000/heros/
+Content-Type: application/json
+
+{
+    "name":"Wonder woman",
+    "real_name":"Diana",
+    "gender":"female",
+    "powers":"Super strength ,Flight,Combat",
+    "universe":"DC"
+}
+
+#API call for retrieving heros
+###
+GET  http://127.0.0.1:8000/heros/2/
+Accept: application/json
+
+#API call for updating heros
+###
+PUT   http://127.0.0.1:8000/heros/2/
+Content-Type: application/json
+
+{
+    "name":"Batman",
+    "real_name":"Bruce wayne",
+    "gender":"Male",
+    "powers":"Martial Arts",
+    "universe":"DC"
+}
+
+#API call for deleting heros
+###
+DELETE http://127.0.0.1:8000/heros/2/
+Accept: application/json
+
+
+
+
+
+
