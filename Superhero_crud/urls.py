@@ -18,10 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from Hero.views import SuperheroListCreateView
 from Hero.views import SuperheroRetrieveUpdateDeleteView
+ 
+from Hero_v2 import views
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('heros/',SuperheroListCreateView.as_view()),
     path('heros/<int:pk>/',SuperheroRetrieveUpdateDeleteView.as_view()),
+    path('v2/heros/',views.HeroListCreateView.as_view()),
+    path('v2/heros/<int:pk>/',views.HeroRetrieveUpdateDeleteview.as_view()),
+
 ]

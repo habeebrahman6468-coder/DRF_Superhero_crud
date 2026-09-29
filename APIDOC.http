@@ -41,6 +41,31 @@ Accept: application/json
 
 
 
+=================Serializers_V2_ENdpoints=============
+
+#API call for listing heros
+###
+GET http://127.0.0.1:8000/v2/heros/
+Accept:application/json
 
 
+#API call for adding heros
+###
+POST  http://127.0.0.1:8000/v2/heros/
+Content-Type: application/json
+
+{
+    "name":"Spiderman",
+    "real_name":"peter parker",
+    "gender":"Male",
+    "powers":"Web slinging,spider sense",
+    "universe":"Marvel"
+}
+
+
+
+#API call for retrieving heros
+###
+GET  http://127.0.0.1:8000/v2/heros/4/
+Accept: application/json
 
